@@ -28,7 +28,7 @@ export function TaskList() {
   }
 
   function handleToggleTaskCompletion(id: number) {
-    setTasks((state: Task[]) => state.map(task => task.id === id ? {...task, isComplete: true} : task))
+    setTasks((state: Task[]) => state.map(task => task.id === id ? {...task, isComplete: !task.isComplete} : task))
   }
 
   function handleRemoveTask(id: number) {
